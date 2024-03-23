@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "CommonJS",
+    "target": "ES2021",
+    //converter modules que usam o common JS para o ES2021
+    "esModuleInterop": true,
+    // adcicionar arquivos de configuração tbm ao 'dist'
+    "allowJs": true
+  }
+}
