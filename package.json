@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gerson",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "git-commit-msg-linter": "^5.0.7"
+  }
 }
