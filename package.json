@@ -9,6 +9,8 @@
   "author": "Gerson",
   "license": "ISC",
   "devDependencies": {
-    "git-commit-msg-linter": "^5.0.7"
+    "@types/node": "^20.11.30",
+    "git-commit-msg-linter": "^5.0.7",
+    "typescript": "^5.4.3"
   }
 }
