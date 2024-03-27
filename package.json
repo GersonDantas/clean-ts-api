@@ -4,7 +4,8 @@
   "description": "clean node api",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "test:staged": "jest --passWithNoTests",
     "prepare": "husky"
   },
   "author": "Gerson",
