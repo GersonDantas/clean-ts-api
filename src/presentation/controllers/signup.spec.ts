@@ -108,7 +108,7 @@ describe('SignupController', () => {
     expect(httpResponse.body).toEqual(new InvalidParamError('email'))
   })
 
-  test('Should return 500 if an invalid server error', () => {
+  test('Should return 500 if EmailValidator throw', () => {
     class EmailValidatorStub implements EmailValidator {
       isValid (email: string): boolean {
         throw new Error()
