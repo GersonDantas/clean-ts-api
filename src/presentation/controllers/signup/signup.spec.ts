@@ -117,7 +117,7 @@ describe('SignupController', () => {
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
     const httpRequest = {
       body: {
-        email: 'invalid_email@hotmail.com',
+        email: 'any_email@hotmail.com',
         name: 'any_name',
         password: 'any_password',
         passwordConfirmation: 'invalid_password'
@@ -223,6 +223,28 @@ describe('SignupController', () => {
       email: 'any_email@hotmail.com',
       name: 'any_name',
       password: 'any_password'
+    })
+  })
+
+  test('Should return 200 if valid data is provided', () => {
+    const { sut } = makeSut()
+    const httpRequest = {
+      body: {
+        email: 'valid_email@hotmail.com',
+        name: 'valid_name',
+        password: 'valid_password',
+        passwordConfirmation: 'valid_password'
+      }
+    }
+
+    const httpResponse = sut.handle(httpRequest)
+
+    expect(httpResponse.statusCode).toBe(200)
+    expect(httpResponse.body).toEqual({
+      id: 'valid_id',
+      name: 'valid_name',
+      email: 'valid_email',
+      password: 'valid_password'
     })
   })
 })
