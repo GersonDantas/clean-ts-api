@@ -1,5 +1,3 @@
-import { type AccountModel } from '../models'
-
 export interface AddAccountModel {
   email: string
   name: string
@@ -7,5 +5,5 @@ export interface AddAccountModel {
 }
 
 export interface AddAccount {
-  add: (data: AddAccountModel) => Promise<AccountModel>
+  add: (data: AddAccountModel) => Promise<boolean>
 }
